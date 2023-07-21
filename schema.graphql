@@ -1,0 +1,15 @@
+type Account @entity {
+    id: ID!
+    free: BigInt!
+    reserved: BigInt!
+    total: BigInt!
+    updatedAt: Int
+}
+
+type ChainState @entity {
+    id: ID!
+    tokenBalance: BigInt!
+    tokenHolders: Int!
+    timestamp: DateTime! @index
+    blockNumber: Int! @index
+}
